@@ -15,7 +15,11 @@
       <td>{{product.price}}</td>
       <td>{{product.condition.name}}</td>
       <td>{{product.category.name}}</td>
-      <td>{{product.image}}</td>
+      <td>
+        <!--suppress AngularNgOptimizedImage -->
+        <img src="assets/images/dinosaur.jpg" alt="{{ product.name }}" class="img-thumbnail"
+             style="width: 50px; height: auto;">
+      </td>
     </tr>
     </tbody>
   </table>
