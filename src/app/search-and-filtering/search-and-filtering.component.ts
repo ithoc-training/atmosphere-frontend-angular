@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ProductsService} from "../services/products.service";
+import {ItemsService} from "../services/items.service";
 import {CommonModule} from "@angular/common";
 import {Product} from "../model/product-models";
 
@@ -12,19 +12,19 @@ import {Product} from "../model/product-models";
 })
 export class SearchAndFilteringComponent implements OnInit {
 
-  protected products: Product[] = [];
+  protected items: Product[] = [];
 
-  constructor(private productService: ProductsService) {
+  constructor(private itemsService: ItemsService) {
   }
 
   ngOnInit() {
 
-    this.productService.getProducts('price', 'asc')
-      .subscribe(products => {
-        products.content.forEach(product => {
-          console.log('product:', product);
+    this.itemsService.getItems()
+      .subscribe(items => {
+        items.content.forEach(item => {
+          console.log('Item:', item);
         });
-        this.products = products.content
+        this.items = items.content;
       });
   }
 

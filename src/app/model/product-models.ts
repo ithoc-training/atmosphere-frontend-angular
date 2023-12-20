@@ -18,6 +18,16 @@ export interface Product {
   condition: Condition;
 }
 
+export interface Item {
+  id: string; // UUID
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+  category: Category;
+  condition: Condition;
+}
+
 export interface Page<T> {
   totalElements: number;
   totalPages: number;
