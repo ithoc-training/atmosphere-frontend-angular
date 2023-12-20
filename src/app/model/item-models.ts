@@ -5,10 +5,15 @@ export interface Pagination<T> {
   pageSize: number
   pageNumber: number
   sortBy: string
-  sortOrder: string
+  sortOrder: string;
+  errors: Error[];
 }
 
-export interface Product {
+export interface Error {
+  message: string
+}
+
+export interface Item {
   id: string
   name: string
   description: string
