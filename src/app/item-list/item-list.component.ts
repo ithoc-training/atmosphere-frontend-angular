@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ItemsService} from "../services/items.service";
 import {CommonModule} from "@angular/common";
-import {Product} from "../model/item-models";
+import {Item} from "../model/item-models";
 
 @Component({
   selector: 'app-search-and-filtering',
@@ -12,7 +12,7 @@ import {Product} from "../model/item-models";
 })
 export class ItemListComponent implements OnInit {
 
-  protected items: Product[] = [];
+  protected items: Item[] = [];
 
   constructor(private itemsService: ItemsService) {
   }
