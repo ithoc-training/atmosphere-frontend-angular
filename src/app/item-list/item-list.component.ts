@@ -1,16 +1,16 @@
 import {Component, OnInit} from '@angular/core';
 import {ItemsService} from "../services/items.service";
 import {CommonModule} from "@angular/common";
-import {Product} from "../model/product-models";
+import {Product} from "../model/item-models";
 
 @Component({
   selector: 'app-search-and-filtering',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './search-and-filtering.component.html',
-  styleUrl: './search-and-filtering.component.css'
+  templateUrl: './item-list.component.html',
+  styleUrl: './item-list.component.css'
 })
-export class SearchAndFilteringComponent implements OnInit {
+export class ItemListComponent implements OnInit {
 
   protected items: Product[] = [];
 
